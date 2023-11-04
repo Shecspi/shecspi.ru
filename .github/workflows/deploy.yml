@@ -19,4 +19,4 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v3
       - name: docker compose
-        run: cd /home/www/shecspi.ru && docker compose up -d
+        run: docker compose up -d
