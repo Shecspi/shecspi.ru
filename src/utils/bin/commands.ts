@@ -14,28 +14,45 @@ export const help = async (args: string[]): Promise<string> => {
       c += Object.keys(bin).sort()[i - 1] + ' ';
     }
   }
-  return `Welcome! Here are all the available commands:
+  return `Привет! Ниже представлен список всех доступных команд.
 \n${c}\n
-[tab]: trigger completion.
-[ctrl+l]/clear: clear terminal.\n
-Type 'sumfetch' to display summary.
+<i>[tab]</i>: автодополнение команд
+<i>[ctrl+l]</i> / <i>clear</i>: очистить терминал\n
+'<i>sumfetch</i>': показать краткую сводку обо мне
 `;
 };
 
 // Redirection
 export const repo = async (args: string[]): Promise<string> => {
   window.open(`${config.repo}`);
-  return 'Opening Github repository...';
+  return 'Открытие Github репозитория...';
 };
 
 // About
 export const about = async (args: string[]): Promise<string> => {
-  return `Hi, I am ${config.name}. 
-Welcome to my website!
-More about me:
-'sumfetch' - short summary.
-'resume' - my latest resume.
-'readme' - my github readme.`;
+  return `Привет! Меня зовут ${config.name}. 
+Добро пожаловать на мою персональную страничку.
+
+Я - Junior Python-разработчик без коммерческого опыта, но программированием я увлекаюсь более 15 лет.
+
+<b>Мои ключевые проекты:</b>
+<b>2022 - ...</b>    Моим текущим основным проектом является сайт "<u><a class="text-light-blue dark:text-dark-blue underline" href="https://moi-goroda.ru" target="_blank">Мои города</a></u>", разработку которого я начал в октябре 2022 года.
+              Он позволяет путешественникам по России отмечать посещённые города и регионы, вести их учёт и просматривать на карте.
+              Причиной создания этого сайта послужило отсутствие на рынке аналогичных качественных решений.
+              На данный момент у сайта около 150 пользователей, которые суммарно посетили более 6.500 городов.
+
+<b>2023</b>          Разработал программу для массового переименования фотографий на основе EXIF-данных. 
+
+<b>2020</b>          Начало изучения Python и разработка игры-платформера <u><a class="text-light-blue dark:text-dark-blue underline" href="https://github.com/Shecspi/Running-Alien" target="_blank">Running Alien</a></u>, написанной на Python с использованием библиотекии PyGame.
+
+<b>2009 - 2010</b>   В рамках своего блога - <u><a class="text-light-blue dark:text-dark-blue underline" href="http://shecspi.blogspot.com" target="_blank">http://shecspi.blogspot.com</a></u> я подготовил единственный в русскоязычном сегменте интернета
+              обучающий курс по библиотеке для создания графического интерфейса на языке PHP - PHP-GTK2.
+
+<b>2009 - 2010</b>   Разработал двухпанельный файловый менеджер с графическим интерфейсом <u><a class="text-light-blue dark:text-dark-blue underline" href="https://code.google.com/archive/p/flight-files/" target="_blank">FlightFiles</a></u>, написанный на языке PHP с использованием библиотеки PHP-GTK2
+
+Больше инеформации обо мне:
+'<i>sumfetch</i>' - краткая сводка
+'<i>resume</i>' - моё резюме`;
 };
 
 export const resume = async (args: string[]): Promise<string> => {
