@@ -33,7 +33,7 @@ export const about = async (args: string[]): Promise<string> => {
   return `Привет! Меня зовут ${config.name}. 
 Добро пожаловать на мою персональную страничку.
 
-Я - Junior Python-разработчик без коммерческого опыта, но программированием я увлекаюсь более 15 лет.
+Я - Junior Python-разработчик без коммерческого опыта, но программированием как хобби я увлекаюсь более 15 лет.
 
 <b>Мои ключевые проекты:</b>
 <b>2022 - ...</b>    Моим текущим основным проектом является сайт "<u><a class="text-light-blue dark:text-dark-blue underline" href="https://moi-goroda.ru" target="_blank">Мои города</a></u>", разработку которого я начал в октябре 2022 года.
@@ -60,15 +60,6 @@ export const resume = async (args: string[]): Promise<string> => {
   return 'Opening resume...';
 };
 
-// Donate
-export const donate = async (args: string[]): Promise<string> => {
-  return `thank you for your interest. 
-here are the ways you can support my work:
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
-`;
-};
-
 // Contact
 export const email = async (args: string[]): Promise<string> => {
   window.open(`mailto:${config.email}`);
@@ -79,12 +70,6 @@ export const github = async (args: string[]): Promise<string> => {
   window.open(`https://github.com/${config.social.github}/`);
 
   return 'Opening github...';
-};
-
-export const linkedin = async (args: string[]): Promise<string> => {
-  window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
-
-  return 'Opening linkedin...';
 };
 
 // Search
