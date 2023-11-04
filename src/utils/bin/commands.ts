@@ -163,6 +163,8 @@ export const banner = (args?: string[]): string => {
     ░░███     ░░████████  ░░█████    █████ █████░░██████   ░░█████   
      ░░░       ░░░░░░░░    ░░░░░    ░░░░░ ░░░░░  ░░░░░░     ░░░░░    
 
+Привет!
+
 Введите '<i>help</i>', чтобы увидеть список доступных комманд.
 Введите '<i>sumfetch</i>', чтобы увидеть краткую сводку обо мне.
 Введите '<i>repo</i>' или нажмите <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">здесь</a></u>, чтобы перейти в мой Github-репозиторий.
