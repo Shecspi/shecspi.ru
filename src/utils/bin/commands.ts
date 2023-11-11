@@ -57,40 +57,19 @@ export const about = async (args: string[]): Promise<string> => {
 
 export const resume = async (args: string[]): Promise<string> => {
   window.open(`${config.resume_url}`);
-  return 'Opening resume...';
+  return 'Открытие resume...';
 };
 
 // Contact
 export const email = async (args: string[]): Promise<string> => {
   window.open(`mailto:${config.email}`);
-  return `Opening mailto:${config.email}...`;
+  return `Открытие mailto:${config.email}...`;
 };
 
 export const github = async (args: string[]): Promise<string> => {
   window.open(`https://github.com/${config.social.github}/`);
 
-  return 'Opening github...';
-};
-
-// Search
-export const google = async (args: string[]): Promise<string> => {
-  window.open(`https://google.com/search?q=${args.join(' ')}`);
-  return `Searching google for ${args.join(' ')}...`;
-};
-
-export const duckduckgo = async (args: string[]): Promise<string> => {
-  window.open(`https://duckduckgo.com/?q=${args.join(' ')}`);
-  return `Searching duckduckgo for ${args.join(' ')}...`;
-};
-
-export const bing = async (args: string[]): Promise<string> => {
-  window.open(`https://bing.com/search?q=${args.join(' ')}`);
-  return `Wow, really? You are using bing for ${args.join(' ')}?`;
-};
-
-export const reddit = async (args: string[]): Promise<string> => {
-  window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`);
-  return `Searching reddit for ${args.join(' ')}...`;
+  return 'Открытие Github...';
 };
 
 // Typical linux commands
@@ -103,16 +82,15 @@ export const whoami = async (args: string[]): Promise<string> => {
 };
 
 export const ls = async (args: string[]): Promise<string> => {
-  return `a
-bunch
-of
-fake
-directories`;
+  return `drwxr-xr-x   root  root   4096   00:01   большая
+drwxr-xr-x   root  root    680   07:01   куча
+lrwxrwxrwx   root  root      0   22:33   ненастоящих
+drwxrwxrwt   root  root   4096   16:04   директорий`;
 };
 
 export const cd = async (args: string[]): Promise<string> => {
-  return `unfortunately, i cannot afford more directories.
-if you want to help, you can type 'donate'.`;
+  return `К сожалению, это придожение не умеет переходить по папкам.
+Это всего-лишь сайт-открытка, а не реальная операционная система :)`;
 };
 
 export const date = async (args: string[]): Promise<string> => {
@@ -120,24 +98,23 @@ export const date = async (args: string[]): Promise<string> => {
 };
 
 export const vi = async (args: string[]): Promise<string> => {
-  return `woah, you still use 'vi'? just try 'vim'.`;
+  return `Уххх... Ты всё ещё используешь '<i>vi</i>'? Уже ведь давно вышел '<i>vim</i>' Советую попробовать его.`;
 };
 
 export const vim = async (args: string[]): Promise<string> => {
-  return `'vim' is so outdated. how about 'nvim'?`;
+  return `'<i>vim</i>' тоже уже не в моде. Попробуй '<i>nvim</i>'.`;
 };
 
 export const nvim = async (args: string[]): Promise<string> => {
-  return `'nvim'? too fancy. why not 'emacs'?`;
+  return `'<i>nvim</i>' хорош, но его нужно долго настраивать под себя.\nСоветую попробовать готовую сборку '<i>nvchad</i>'.`;
 };
 
-export const emacs = async (args?: string[]): Promise<string> => {
-  return `you know what? just use vscode.`;
+export const nvchad = async (args?: string[]): Promise<string> => {
+  return `Я рад, что ты дошёл до сюда))\n'<i>nvchad</i>' крутая сборка, я её использую как основной текстовый редактор.`;
 };
 
 export const sudo = async (args?: string[]): Promise<string> => {
-  window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
-  return `Permission denied: with little power comes... no responsibility? `;
+  return `Отказано в доступе... `;
 };
 
 // Banner
@@ -165,6 +142,6 @@ export const banner = (args?: string[]): string => {
 
 Введите '<i>help</i>', чтобы увидеть список доступных комманд.
 Введите '<i>sumfetch</i>', чтобы увидеть краткую сводку обо мне.
-Введите '<i>repo</i>' или нажмите <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">здесь</a></u>, чтобы перейти в мой Github-репозиторий.
+Введите '<i>about</i>', чтобы посмотреть подробную информацию обо мне.
 `;
 };
